@@ -5,6 +5,7 @@ public class Car implements Runnable {
     private CyclicBarrier cb;
     private static int CARS_COUNT;
     protected AtomicInteger ai;
+    public AtomicInteger numFinish;
     static {
         CARS_COUNT = 0;
     }
@@ -23,13 +24,14 @@ public class Car implements Runnable {
     public AtomicInteger getAthomic() {
         return ai;
     }
-    public Car(Race race, int speed, CyclicBarrier cb) {
+    public Car(Race race, int speed, CyclicBarrier cb, AtomicInteger numFinish) {
         this.race = race;
         this.speed = speed;
         CARS_COUNT++;
         this.name = "Участник #" + CARS_COUNT;
         this.cb=cb;
         this.ai = new AtomicInteger(0);
+        this.numFinish = numFinish;
     }
     @Override
     public void run() {

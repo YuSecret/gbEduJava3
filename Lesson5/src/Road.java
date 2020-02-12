@@ -17,7 +17,11 @@ public class Road extends Stage {
 
             System.out.println(c.getName() + " закончил этап: " + description+" №"+ai.get());
             if (ai.get()==c.getRace().getRaceCount()) {
-                System.out.println(c.getName() + " Финишировал");
+                c.numFinish.incrementAndGet();
+                System.out.println(c.getName() + " Финишировал "+c.numFinish.get());
+                if (c.numFinish.get()==c.getCarsCount()) {
+                    System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
+                }
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
