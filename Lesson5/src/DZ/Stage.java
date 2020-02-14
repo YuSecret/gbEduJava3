@@ -1,4 +1,4 @@
-import java.util.concurrent.atomic.AtomicInteger;
+package DZ;
 
 public abstract class Stage {
     protected int length;
