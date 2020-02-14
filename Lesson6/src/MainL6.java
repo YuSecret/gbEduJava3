@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class MainL6 {
-    private static final Logger logger = Logger.getLogger(Lesson_6.MainL6.class.getName());
+    private static final Logger logger = Logger.getLogger(MainL6.class.getName());
 
     public static void main(String[] args) throws IOException {
         logger.setLevel(Level.ALL);
