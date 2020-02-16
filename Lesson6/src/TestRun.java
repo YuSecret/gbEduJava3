@@ -26,4 +26,16 @@ public class TestRun {
     public void testCalcArray4() {
         Assert.assertEquals(new int[] {}, run.calcArray(new int[] { 4 }));
     }
+    //2 задание
+    @Test()
+    public void testCalcArray2_1() {
+        Assert.assertEquals(true, run.find1or4int(new int[] { 4 }));
+    }
+    //2 задание
+    @Test()
+    public void testCalcArray2_2() {
+        Assert.assertEquals(false, run.find1or4int(new int[] { 8, 3 , 5, 9 }));
+    }
+
+
 }

@@ -58,4 +58,15 @@ public class Run {
     Если в нем нет хоть одной четверки или единицы, то метод вернет false;
     Написать набор тестов для этого метода (по 3-4 варианта входных данных).
      */
+
+    public static boolean find1or4int(int [] input) {
+        boolean result = false;
+        for (int i = 0; i < input.length; i++) {
+            if (input[i]==1 || input[i]==4) {
+                result =true;
+                break;
+            }
+        }
+        return result;
+    }
 }
