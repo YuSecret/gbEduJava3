@@ -1,13 +1,11 @@
 import org.junit.*;
 
 public class TestRun {
-    Calculator calculator;
     Run run;
 
     @Before
     public void init() {
        run = new Run();
-       calculator=new Calculator();
     }
     @Test
     public void testCalcArray1() {
@@ -36,6 +34,5 @@ public class TestRun {
     public void testCalcArray2_2() {
         Assert.assertEquals(false, run.find1or4int(new int[] { 8, 3 , 5, 9 }));
     }
-
 
 }
