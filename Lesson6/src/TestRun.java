@@ -9,20 +9,20 @@ public class TestRun {
     }
     @Test
     public void testCalcArray1_1() {
-        Assert.assertEquals(new int[]{1, 7}, run.calcArray(new int[] { 1, 2, 4, 4, 2, 3, 4, 1, 7 }));
+        Assert.assertArrayEquals(new int[]{1, 7}, run.calcArray(new int[] { 1, 2, 4, 4, 2, 3, 4, 1, 7 }));
     }
 
     @Test
     public void testCalcArray1_2() {
-        Assert.assertEquals(new int[] {}, run.calcArray(new int[] { 1, 2, 4, 4, 2, 3, 4, 1, 4 }));
+        Assert.assertArrayEquals(new int[] {}, run.calcArray(new int[] { 1, 2, 4, 4, 2, 3, 4, 1, 4 }));
     }
     @Test(expected = RuntimeException.class)
     public void testCalcArray1_3() {
-        Assert.assertEquals(new int[] {}, run.calcArray(new int[] { 1, 2, 5, 5, 2, 3, 5, 1, 0 }));
+        Assert.assertArrayEquals(new int[] {}, run.calcArray(new int[] { 1, 2, 5, 5, 2, 3, 5, 1, 0 }));
     }
     @Test()
     public void testCalcArray1_4() {
-        Assert.assertEquals(new int[] {}, run.calcArray(new int[] { 4 }));
+        Assert.assertArrayEquals(new int[] {}, run.calcArray(new int[] { 4 }));
     }
 
 
