@@ -24,6 +24,8 @@ public class TestRun {
     public void testCalcArray1_4() {
         Assert.assertEquals(new int[] {}, run.calcArray(new int[] { 4 }));
     }
+
+
     //2 задание
     @Test()
     public void testCalcArray2_1() {
