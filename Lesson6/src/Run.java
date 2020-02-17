@@ -10,23 +10,7 @@ public class Run {
     Вх: [ 1 2 4 4 2 3 4 1 7 ] -> вых: [ 1 7 ].
     */
 
-    public static void main(String[] args) {
-
-        int [] inputArray = { 1, 2, 4, 4, 2, 3, 4, 1, 4 };
-        int [] resultArray = calcArray(inputArray);
-
-        StringBuilder sb = new StringBuilder(" [ ");
-        for (int i = 0; i < resultArray.length; i++) {
-            if (i>0 && i==resultArray.length-1) {sb.append( resultArray[i] );}
-            else {sb.append( resultArray[i] +", ");}
-        }
-        sb.append(" ] ");
-        System.out.println(sb.toString());
-
-
-   }
-
-    public static int [] calcArray(int[] input) {
+    public int [] calcArray(int[] input) {
         int num=0;
         boolean find4=false;
         if (input.length==0) {return new int[] {};}
@@ -36,11 +20,12 @@ public class Run {
                 num=i;
             }
         }
-        if (!find4) {throw  new RuntimeException("4 not found");}
+        if (!find4) {throw new RuntimeException("4 not found");}
 
         if (num==input.length-1) {
             System.out.println("выход и возврат пустого");
-            return new int[] {};}
+            return new int[] {};
+        }
         num++;
         System.out.println("индекс выборки с "+num +" по "+(input.length-1));
         System.out.println("размер массива "+(input.length-num));
