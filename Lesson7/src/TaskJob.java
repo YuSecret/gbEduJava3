@@ -16,11 +16,8 @@ public class TaskJob {
         }
         printArr(arr);
         //заполнение
-
-        int iter = 0;
-        while (!isFull(arr) ) {
+        while (!isFull(arr)) {
             obhod(arr);
-            iter++;
         }
         printArr(arr);
     }
